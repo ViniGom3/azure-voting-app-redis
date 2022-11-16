@@ -54,10 +54,10 @@ spec:
       labels:
         app: azure-vote-front
     spec:
-      imagePullPolicy: Always
       nodeSelector:
         "kubernetes.io/os": linux
       containers:
+        imagePullPolicy: Always
       - name: azure-vote-front
         image: <registryName>.azurecr.io/azuredocs/azure-vote-front:v1
         ports:
