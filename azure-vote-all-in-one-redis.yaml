@@ -57,7 +57,6 @@ spec:
       nodeSelector:
         "kubernetes.io/os": linux
       containers:
-        imagePullPolicy: Always
       - name: azure-vote-front
         image: <registryName>.azurecr.io/azuredocs/azure-vote-front:v1
         ports:
@@ -67,6 +66,7 @@ spec:
             cpu: 250m
           limits:
             cpu: 500m
+        imagePullPolicy: Always
         env:
         - name: REDIS
           value: "azure-vote-back"
