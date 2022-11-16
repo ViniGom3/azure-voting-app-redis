@@ -39,7 +39,6 @@ kind: Deployment
 metadata:
   name: azure-vote-front
 spec:
-  progressDeadlineSeconds: 3600
   replicas: 1
   selector:
     matchLabels:
