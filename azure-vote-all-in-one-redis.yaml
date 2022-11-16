@@ -40,7 +40,6 @@ metadata:
   name: azure-vote-front
 spec:
   progressDeadlineSeconds: 3600
-  imagePullPolicy: Always
   replicas: 1
   selector:
     matchLabels:
@@ -55,6 +54,7 @@ spec:
       labels:
         app: azure-vote-front
     spec:
+      imagePullPolicy: Always
       nodeSelector:
         "kubernetes.io/os": linux
       containers:
